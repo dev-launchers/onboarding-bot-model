@@ -1,0 +1,3 @@
+## To do:
+Still operating after 20 min without answer...
+* [Instruction info](https://huggingface.co/tiiuae/falcon-7b-instruct)

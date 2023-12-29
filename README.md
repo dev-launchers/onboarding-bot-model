@@ -20,21 +20,24 @@ The [ChatBot](https://en.wikipedia.org/wiki/Chatbot) project is valuable to this
 ## Scenario
 
 1. Creation based on the [ChatGPT API](https://platform.openai.com/docs/api-reference).
-2. Feasibility study using a list of 13 popular Open Source LLMs of 2023.
-    * 🚼 [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b)
-    * 🆕 [OpenLLaMA](https://huggingface.co/openlm-research/open_llama_7b) ([GitHub project](https://github.com/openlm-research/open_llama))
-    * 🚼 [Falcon](https://huggingface.co/tiiuae/falcon-7b)
-    * ✅ [Dolly 2.0](https://huggingface.co/databricks/dolly-v2-12b) ([GitHub project](https://github.com/databrickslabs/dolly))
-    * ✅ [MPT](https://huggingface.co/mosaicml/mpt-30b) ([GitHub project](https://github.com/mosaicml/llm-foundry/))
-    * 🚼 Guanaco ([GitHub project](https://github.com/artidoro/qlora))
-    * 🚼 [Bloom](https://huggingface.co/bigscience/bloom) ([GitHub project](https://github.com/bigscience-workshop/xmtf#models))
-    * 🆕 Stanford Alpaca ([GitHub project](https://github.com/tatsu-lab/stanford_alpaca))
-    * 🆕 OpenChatKit ([GitHub project](https://github.com/togethercomputer/OpenChatKit)) ([database](https://github.com/togethercomputer/OpenDataHub))
-    * 🆘 GPT4All ([GitHub project](https://github.com/nomic-ai/gpt4all))
-    * ✅ [FLAN-T5](https://huggingface.co/google/flan-t5-base) ([GitHub project](https://github.com/lm-sys/FastChat))
-    * 🆕 [WizardLM](https://huggingface.co/WizardLM) ([GitHub project](https://github.com/nlpxucan/WizardLM))
-    * 🆕 [Mistral](https://huggingface.co/mistralai) ([Documentation](https://docs.mistral.ai/quickstart))
-    * _✅ Good ; 🚼 bad first attempt ; 🆘 unstartable ; 🆕 to try_
+2. Feasibility study using a list of popular Open Source LLMs of 2023.
+
+| 🐳 | Competitor | Statut    | GitHub          | Hugging Face    | Info    |
+|----|------------|-----------|-----------------|-----------------|---------|
+| 🚼 | [Llama 2](models/Llama_2/)     | In progress |                                                            | [Model](https://huggingface.co/meta-llama/Llama-2-7b) | |
+| ✅ | [OpenLLaMA](models/OpenLLaMA/) | Ready       | [Code](https://github.com/openlm-research/open_llama)      | [Model](https://huggingface.co/openlm-research/open_llama_7b) | |
+| 🚼 | [Falcon](models/Falcon/)       | In progress |                                                            | [Model](https://huggingface.co/tiiuae/falcon-7b) | |
+| ✅ | [Dolly 2.0](models/Dolly_2/)   | Ready       | [Code](https://github.com/databrickslabs/dolly)            | [Model](https://huggingface.co/databricks/dolly-v2-12b) | |
+| ✅ | [MPT](models/MPT/)             | Ready       | [Code](https://github.com/mosaicml/llm-foundry/)           | [Model](https://huggingface.co/mosaicml/mpt-30b) | |
+| 🚼 | [Guanaco](models/Guanaco/)     | In progress | [Code](https://github.com/artidoro/qlora/)                 | | |
+| 🚼 | [Bloom](models/Bloom/)         | In progress | [Code](https://github.com/bigscience-workshop/xmtf#models) | [Model](https://huggingface.co/bigscience/bloom) | |
+| 🆕 | [Alpaca](models/Alpaca/)       | To try      | [Code](https://github.com/tatsu-lab/stanford_alpaca)       | | |
+| 🚼 | [GPT NeoXT](models/GPT_NeoXT/) | In progress | [Code](https://github.com/togethercomputer/OpenChatKit/blob/main/docs/GPT-NeoXT-Chat-Base-20B.md) | [Model](https://huggingface.co/togethercomputer/GPT-NeoXT-Chat-Base-20B) |         |
+| 🆘 | [GPT4All](models/GPT4All/)     | Unstartable | [Code](https://github.com/nomic-ai/gpt4all)                | | |
+| ✅ | [FLAN-T5](models/FLAN_T5/)     | Ready       | [Code](https://github.com/lm-sys/FastChat)                 | [Model](https://huggingface.co/google/flan-t5-base) | |
+| 🆕 | [WizardLM](models/WizardLM/)   | To try      | [Code](https://github.com/nlpxucan/WizardLM)               | [Model](https://huggingface.co/WizardLM) | |
+| 🆕 | [Mistral](models/Mistral/)     | To try      |                                                            | [Model](https://huggingface.co/mistralai) | [Documentation](https://docs.mistral.ai/quickstart) |
+|    |                                |             |                                                            | | |
 
 3. Comparison of results with [MLflow](https://mlflow.org).
 4. [Fine-Tuning](https://huggingface.co/docs/transformers/training) of the chosen model(s).

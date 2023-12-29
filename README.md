@@ -25,7 +25,7 @@ The [ChatBot](https://en.wikipedia.org/wiki/Chatbot) project is valuable to this
     * 🆕 [OpenLLaMA](https://huggingface.co/openlm-research/open_llama_7b) ([GitHub project](https://github.com/openlm-research/open_llama))
     * 🚼 [Falcon](https://huggingface.co/tiiuae/falcon-7b)
     * ✅ [Dolly 2.0](https://huggingface.co/databricks/dolly-v2-12b) ([GitHub project](https://github.com/databrickslabs/dolly))
-    * 🆕 [MPT](https://huggingface.co/mosaicml/mpt-30b) ([GitHub project](https://github.com/mosaicml/llm-foundry/))
+    * ✅ [MPT](https://huggingface.co/mosaicml/mpt-30b) ([GitHub project](https://github.com/mosaicml/llm-foundry/))
     * 🚼 Guanaco ([GitHub project](https://github.com/artidoro/qlora))
     * 🚼 [Bloom](https://huggingface.co/bigscience/bloom) ([GitHub project](https://github.com/bigscience-workshop/xmtf#models))
     * 🆕 Stanford Alpaca ([GitHub project](https://github.com/tatsu-lab/stanford_alpaca))

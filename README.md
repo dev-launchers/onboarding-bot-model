@@ -21,16 +21,16 @@ The [ChatBot](https://en.wikipedia.org/wiki/Chatbot) project is valuable to this
 
 1. Creation based on the [ChatGPT API](https://platform.openai.com/docs/api-reference).
 2. Feasibility study using a list of 13 popular Open Source LLMs of 2023.
-    * 🆕 [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b)
+    * 🚼 [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b)
     * 🆕 [OpenLLaMA](https://huggingface.co/openlm-research/open_llama_7b) ([GitHub project](https://github.com/openlm-research/open_llama))
     * 🚼 [Falcon](https://huggingface.co/tiiuae/falcon-7b)
     * ✅ [Dolly 2.0](https://huggingface.co/databricks/dolly-v2-12b) ([GitHub project](https://github.com/databrickslabs/dolly))
     * 🆕 [MPT](https://huggingface.co/mosaicml/mpt-30b) ([GitHub project](https://github.com/mosaicml/llm-foundry/))
-    * 🆕 Guanaco ([GitHub project](https://github.com/artidoro/qlora))
+    * 🚼 Guanaco ([GitHub project](https://github.com/artidoro/qlora))
     * 🚼 [Bloom](https://huggingface.co/bigscience/bloom) ([GitHub project](https://github.com/bigscience-workshop/xmtf#models))
     * 🆕 Stanford Alpaca ([GitHub project](https://github.com/tatsu-lab/stanford_alpaca))
     * 🆕 OpenChatKit ([GitHub project](https://github.com/togethercomputer/OpenChatKit)) ([database](https://github.com/togethercomputer/OpenDataHub))
-    * 🆕 GPT4All ([GitHub project](https://github.com/nomic-ai/gpt4all))
+    * 🆘 GPT4All ([GitHub project](https://github.com/nomic-ai/gpt4all))
     * ✅ [FLAN-T5](https://huggingface.co/google/flan-t5-base) ([GitHub project](https://github.com/lm-sys/FastChat))
     * 🆕 [WizardLM](https://huggingface.co/WizardLM) ([GitHub project](https://github.com/nlpxucan/WizardLM))
     * 🆕 [Mistral](https://huggingface.co/mistralai) ([Documentation](https://docs.mistral.ai/quickstart))

@@ -19,8 +19,8 @@ The [ChatBot](https://en.wikipedia.org/wiki/Chatbot) project is valuable to this
 
 ## Scenario
 
-1. Creation based on the [ChatGPT API](https://platform.openai.com/docs/api-reference).
-2. Feasibility study using a list of popular Open Source LLMs of 2023.
+1. 🕒 Development of the current [chatbot](https://github.com/dev-launchers/onboarding-bot) by the team, utilizing the [ChatGPT API](https://platform.openai.com/docs/api-reference).
+2. 🕒 Feasibility study using a list of popular Open Source LLMs of 2023.
 
 | 🐳 | Competitor | Statut    | GitHub          | Hugging Face    | Info    |
 |----|------------|-----------|-----------------|-----------------|---------|
@@ -37,12 +37,13 @@ The [ChatBot](https://en.wikipedia.org/wiki/Chatbot) project is valuable to this
 | ✅ | [FLAN-T5](models/FLAN_T5/)     | Ready       | [Code](https://github.com/lm-sys/FastChat)                 | [Model](https://huggingface.co/google/flan-t5-base) | |
 | 🆕 | [WizardLM](models/WizardLM/)   | To try      | [Code](https://github.com/nlpxucan/WizardLM)               | [Model](https://huggingface.co/WizardLM) | |
 | 🆕 | [Mistral](models/Mistral/)     | To try      |                                                            | [Model](https://huggingface.co/mistralai) | [Documentation](https://docs.mistral.ai/quickstart) |
-| 🆕 | [Ferret](models/Ferret/)       |  To try     | [Code](https://github.com/apple/ml-ferret)                 | | |
+| 🆕 | [Ferret](models/Ferret/)       | To try      | [Code](https://github.com/apple/ml-ferret)                 | | |
 |    |                                |             |                                                            | | |
 
-3. Comparison of results with [MLflow](https://mlflow.org).
-4. [Fine-Tuning](https://huggingface.co/docs/transformers/training) of the chosen model(s).
-5. Testing within the [Dev Launchers](https://devlaunchers.org) community.
+3. 📝 Compile and rewrite the readme.md files, procedures, create team descriptions, and consolidate documentation for the tools used.
+4. 📝 Comparison of results with [MLflow](https://mlflow.org).
+5. 📝 [Fine-Tuning](https://huggingface.co/docs/transformers/training) of the chosen model(s).
+6. 📝 Testing within the [Dev Launchers](https://devlaunchers.org) community.
 
 ## Installation
 

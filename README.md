@@ -31,12 +31,13 @@ The [ChatBot](https://en.wikipedia.org/wiki/Chatbot) project is valuable to this
 | ✅ | [MPT](models/MPT/)             | Ready       | [Code](https://github.com/mosaicml/llm-foundry/)           | [Model](https://huggingface.co/mosaicml/mpt-30b) | |
 | 🚼 | [Guanaco](models/Guanaco/)     | In progress | [Code](https://github.com/artidoro/qlora/)                 | | |
 | 🚼 | [Bloom](models/Bloom/)         | In progress | [Code](https://github.com/bigscience-workshop/xmtf#models) | [Model](https://huggingface.co/bigscience/bloom) | |
-| 🆕 | [Alpaca](models/Alpaca/)       | To try      | [Code](https://github.com/tatsu-lab/stanford_alpaca)       | | |
+| ✅ | [Alpaca](models/Alpaca/)       | Ready       | [Code](https://github.com/tatsu-lab/stanford_alpaca)       | [Model](https://huggingface.co/tatsu-lab/alpaca-7b-wdiff) | |
 | 🚼 | [GPT NeoXT](models/GPT_NeoXT/) | In progress | [Code](https://github.com/togethercomputer/OpenChatKit/blob/main/docs/GPT-NeoXT-Chat-Base-20B.md) | [Model](https://huggingface.co/togethercomputer/GPT-NeoXT-Chat-Base-20B) |         |
 | 🆘 | [GPT4All](models/GPT4All/)     | Unstartable | [Code](https://github.com/nomic-ai/gpt4all)                | | |
 | ✅ | [FLAN-T5](models/FLAN_T5/)     | Ready       | [Code](https://github.com/lm-sys/FastChat)                 | [Model](https://huggingface.co/google/flan-t5-base) | |
 | 🆕 | [WizardLM](models/WizardLM/)   | To try      | [Code](https://github.com/nlpxucan/WizardLM)               | [Model](https://huggingface.co/WizardLM) | |
 | 🆕 | [Mistral](models/Mistral/)     | To try      |                                                            | [Model](https://huggingface.co/mistralai) | [Documentation](https://docs.mistral.ai/quickstart) |
+| 🆕 | [Ferret](models/Ferret/)       |  To try     | [Code](https://github.com/apple/ml-ferret)                 | | |
 |    |                                |             |                                                            | | |
 
 3. Comparison of results with [MLflow](https://mlflow.org).

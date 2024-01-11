@@ -35,9 +35,8 @@ The [ChatBot](https://en.wikipedia.org/wiki/Chatbot) project is valuable to this
 | 🚼 | [GPT NeoXT](models/GPT_NeoXT/) | In progress | [Code](https://github.com/togethercomputer/OpenChatKit/blob/main/docs/GPT-NeoXT-Chat-Base-20B.md) | [Model](https://huggingface.co/togethercomputer/GPT-NeoXT-Chat-Base-20B) |         |
 | 🆘 | [GPT4All](models/GPT4All/)     | Unstartable | [Code](https://github.com/nomic-ai/gpt4all)                | | |
 | ✅ | [FLAN-T5](models/FLAN_T5/)     | Ready       | [Code](https://github.com/lm-sys/FastChat)                 | [Model](https://huggingface.co/google/flan-t5-base) | |
-| 🆕 | [WizardLM](models/WizardLM/)   | To try      | [Code](https://github.com/nlpxucan/WizardLM)               | [Model](https://huggingface.co/WizardLM) | |
-| 🆕 | [Mistral](models/Mistral/)     | To try      |                                                            | [Model](https://huggingface.co/mistralai) | [Documentation](https://docs.mistral.ai/quickstart) |
-| 🆕 | [Ferret](models/Ferret/)       | To try      | [Code](https://github.com/apple/ml-ferret)                 | | |
+| 🚼 | [WizardLM](models/WizardLM/)   | In progress | [Code](https://github.com/nlpxucan/WizardLM)               | [Model](https://huggingface.co/WizardLM) | |
+| 🆘 | [Mistral](models/Mistral/)     | Unstartable |                                                            | [Model](https://huggingface.co/mistralai) | [Documentation](https://docs.mistral.ai/quickstart) |
 |    |                                |             |                                                            | | |
 
 3. 📝 Compile and rewrite the readme.md files, procedures, create team descriptions, and consolidate documentation for the tools used.

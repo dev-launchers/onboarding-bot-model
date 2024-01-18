@@ -25,19 +25,19 @@ The [ChatBot](https://en.wikipedia.org/wiki/Chatbot) project is valuable to this
 | 🐳 | 🦜 | Competitor | Statut    | GitHub          | Hugging Face    | Info    |
 |----|----|------------|-----------|-----------------|-----------------|---------|
 | ✅ | 🔜 | [Open LLaMA](models/OpenLLaMA/) | Ready       | [Code](https://github.com/openlm-research/open_llama)      | [Model](https://huggingface.co/openlm-research/open_llama_7b) | |
-| ✅ | 🔜 | [Dolly 2.0](models/Dolly_2/)   | Ready       | [Code](https://github.com/databrickslabs/dolly)            | [Model](https://huggingface.co/databricks/dolly-v2-12b) | |
-| ✅ | 🔜 | [MPT](models/MPT/)             | Ready       | [Code](https://github.com/mosaicml/llm-foundry/)           | [Model](https://huggingface.co/mosaicml/mpt-30b) | |
-| ✅ | 🔜 | [Alpaca](models/Alpaca/)       | Ready       | [Code](https://github.com/tatsu-lab/stanford_alpaca)       | [Model](https://huggingface.co/tatsu-lab/alpaca-7b-wdiff) | |
-| ✅ | 🔜 | [FLAN-T5](models/FLAN_T5/)     | Ready       | [Code](https://github.com/lm-sys/FastChat)                 | [Model](https://huggingface.co/google/flan-t5-base) | |
-| 🚼 | 🔜 | [Llama 2](models/Llama_2/)     | In progress |                                                            | [Model](https://huggingface.co/meta-llama/Llama-2-7b) | |
-| 🚼 | 🔜 | [Falcon](models/Falcon/)       | In progress |                                                            | [Model](https://huggingface.co/tiiuae/falcon-7b) | |
-| 🚼 | 🔜 | [Guanaco](models/Guanaco/)     | In progress | [Code](https://github.com/artidoro/qlora/)                 | | |
-| 🚼 | 🔜 | [Bloom](models/Bloom/)         | In progress | [Code](https://github.com/bigscience-workshop/xmtf#models) | [Model](https://huggingface.co/bigscience/bloom) | |
-| 🚼 | 🔜 | [GPT NeoXT](models/GPT_NeoXT/) | In progress | [Code](https://github.com/togethercomputer/OpenChatKit/blob/main/docs/GPT-NeoXT-Chat-Base-20B.md) | [Model](https://huggingface.co/togethercomputer/GPT-NeoXT-Chat-Base-20B) |         |
-| 🚼 | 🔜 | [WizardLM](models/WizardLM/)   | In progress | [Code](https://github.com/nlpxucan/WizardLM)               | [Model](https://huggingface.co/WizardLM) | |
-| 🆘 | 🔜 | [GPT4All](models/GPT4All/)     | Unstartable | [Code](https://github.com/nomic-ai/gpt4all)                | | |
-| 🆘 | 🔜 | [Mistral](models/Mistral/)     | Unstartable |                                                            | [Model](https://huggingface.co/mistralai) | |
-|    |    |                                |             |                                                            | | |
+| ✅ | ✅ | [Dolly 2.0](models/Dolly_2/)    | Ready       | [Code](https://github.com/databrickslabs/dolly)            | [Model](https://huggingface.co/databricks/dolly-v2-12b) | |
+| ✅ | 🔜 | [MPT](models/MPT/)              | Ready       | [Code](https://github.com/mosaicml/llm-foundry/)           | [Model](https://huggingface.co/mosaicml/mpt-30b) | |
+| ✅ | 🔜 | [Alpaca](models/Alpaca/)        | Ready       | [Code](https://github.com/tatsu-lab/stanford_alpaca)       | [Model](https://huggingface.co/tatsu-lab/alpaca-7b-wdiff) | |
+| ✅ | 🔜 | [FLAN-T5](models/FLAN_T5/)      | Ready       | [Code](https://github.com/lm-sys/FastChat)                 | [Model](https://huggingface.co/google/flan-t5-base) | |
+| 🚼 | 🔜 | [Llama 2](models/Llama_2/)      | In progress |                                                            | [Model](https://huggingface.co/meta-llama/Llama-2-7b) | |
+| 🚼 | 🔜 | [Falcon](models/Falcon/)        | In progress |                                                            | [Model](https://huggingface.co/tiiuae/falcon-7b) | |
+| 🚼 | 🔜 | [Guanaco](models/Guanaco/)      | In progress | [Code](https://github.com/artidoro/qlora/)                 | | |
+| 🚼 | 🔜 | [Bloom](models/Bloom/)          | In progress | [Code](https://github.com/bigscience-workshop/xmtf#models) | [Model](https://huggingface.co/bigscience/bloom) | |
+| 🚼 | 🔜 | [GPT NeoXT](models/GPT_NeoXT/)  | In progress | [Code](https://github.com/togethercomputer/OpenChatKit/blob/main/docs/GPT-NeoXT-Chat-Base-20B.md) | [Model](https://huggingface.co/togethercomputer/GPT-NeoXT-Chat-Base-20B) |         |
+| 🚼 | 🔜 | [WizardLM](models/WizardLM/)    | In progress | [Code](https://github.com/nlpxucan/WizardLM)               | [Model](https://huggingface.co/WizardLM) | |
+| 🆘 | 🔜 | [GPT4All](models/GPT4All/)      | Unstartable | [Code](https://github.com/nomic-ai/gpt4all)                | | |
+| 🆘 | 🔜 | [Mistral](models/Mistral/)      | Unstartable |                                                            | [Model](https://huggingface.co/mistralai) | |
+|    |    |                                 |             |                                                            | | |
 
 3. 📝 Compile and rewrite the readme.md files, procedures, create team descriptions, and consolidate documentation for the tools used.
 4. 📝 Comparison of results with [MLflow](https://mlflow.org).
@@ -104,6 +104,15 @@ pip3 freeze > config_mac.txt
 
 * [ChatGPT API](https://platform.openai.com/docs/introduction)
     * [fine-tuning Chat-GPT](https://platform.openai.com/docs/guides/fine-tuning)
+
+* LangChain :
+    * [Hugging Face](https://python.langchain.com/docs/integrations/platforms/huggingface)
+    * [Hugging Face Tool](https://python.langchain.com/docs/integrations/tools/huggingface_tools)
+
+    * [Docs GitHub](https://python.langchain.com/docs/integrations/document_loaders/github)
+    * [Docs Source Code](https://python.langchain.com/docs/integrations/document_loaders/source_code)
+
+    * [subtitles](https://python.langchain.com/docs/integrations/document_loaders/imsdb)
 
 ## License
 

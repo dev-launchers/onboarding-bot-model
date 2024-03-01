@@ -17,7 +17,11 @@ The [Dev Launchers](https://devlaunchers.org) website is a community of aspiring
 
 The [ChatBot](https://en.wikipedia.org/wiki/Chatbot) project is valuable to this international community working across different time zones. To integrate a new member, it is crucial to be able to address their questions. This becomes challenging when the part of the community capable of responding is located 12 time zones away from the new member. Therefore, it was essential to have a service capable of answering questions, even in the middle of the night.
 
+The purpose of this project is to design an intelligent chatbot, entirely built with open-source components, to answer questions about the teams and projects of an organization. We strive to understand how the different layers of a RAG Langchain work in order to design code that strikes a balance between readability and the performance of the frameworks used.
+
 ## Scenario
+
+### Models
 
 1. 🕒 Development of the current [chatbot](https://github.com/dev-launchers/onboarding-bot) by the team, utilizing the [ChatGPT API](https://platform.openai.com/docs/api-reference).
 2. 🕒 Feasibility study using a list of popular Open Source LLMs of 2023.
@@ -43,6 +47,59 @@ The [ChatBot](https://en.wikipedia.org/wiki/Chatbot) project is valuable to this
 4. 📝 Comparison of results with [MLflow](https://mlflow.org).
 5. 📝 [Fine-Tuning](https://huggingface.co/docs/transformers/training) of the chosen model(s).
 6. 📝 Testing within the [Dev Launchers](https://devlaunchers.org) community.
+
+### Langchains
+
+1. 🕒 [Retrieval](https://python.langchain.com/docs/modules/data_connection/) (Load, split, embed, store, retrieval)
+
+    1. [Load](https://python.langchain.com/docs/integrations/document_loaders) and [transform](https://python.langchain.com/docs/integrations/document_transformers)
+
+    | Statut |   Type                                            | Method |
+    |--------|---------------------------------------------------|--------|
+    | ✅     | [Markdown](langchains/extract_from/readme_urls/)  | URL    |
+    | ✅     | [Markdown](langchains/extract_from/readme_files/) | Files  |
+    | 🔜     | Python                                            |        |
+    |        |                                                   |        |
+
+    2. Split
+
+    | Statut |   Type                                              | Info |
+    |--------|-----------------------------------------------------|------|
+    | ✅     | [Markdown](langchains/documents_from/readme_files/) | [Info](https://python.langchain.com/docs/modules/data_connection/document_transformers/markdown_header_metadata) |
+    | 🔜     | Python                                              | |
+    |        |                                                     | |
+
+    3. [Embed](https://python.langchain.com/docs/integrations/text_embedding)
+
+    | Statut | Name                                                    | Info |
+    |--------|---------------------------------------------------------|------|
+    | ✅     | [Awadb](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/text_embedding/awadb) |
+    | ✅     | [Hugging Face](langchains/documents_from/readme_files/) | [Info](https://python.langchain.com/docs/integrations/text_embedding/huggingfacehub) |
+    |        |                                                         | |
+
+    4. [Store](https://python.langchain.com/docs/integrations/vectorstores)
+
+    | Statut | Name                                                | Info |
+    |--------|-----------------------------------------------------|------|
+    | ✅     | [Annoy](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/annoy) |
+    | ✅     | [Awadb](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/awadb) |
+    | ✅     | [Chroma](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/chroma) |
+    | ✅     | [FAISS](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/faiss) |
+    | ✅     | [LanceDB](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/lancedb) |
+    | 🔜     | Pinecone                                             | [Info](https://python.langchain.com/docs/integrations/vectorstores/pinecone) |
+    | ✅     | [Qdrant](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/qdrant) |
+    | ✅     | [scikit-learn](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/sklearn) |
+    | ✅     | [TileDB](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/tiledb) |
+    | ✅     | [USearch](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/usearch) |
+    | 🔜     | [vearch](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/vearch) |
+    |        |                                                         | |
+
+    5. Retrieval
+
+    🕒
+
+2. 🕒 Connect to the agent
+3. 🕒 Test the API
 
 ## Installation
 
@@ -89,10 +146,18 @@ pip3 freeze > config_mac.txt
 
 ## Files
 
-- models\name\FastAPI\\`autorun.sh`: Launch script for download, install and start the application.
-- models\name\FastAPI\\`Dockerfile`: Contains all the commands a user could call on the command line to assemble the image.
-- models\name\FastAPI\\`requirements.txt`: The libraries required for the script.
-- models\name\FastAPI\app\\`main.py`: The script of the web application.
+### Models
+
+- models\\[{name}](models/)\FastAPI\\`autorun.sh`: Launch script for download, install and start the application.
+- models\\[{name}](models/)\FastAPI\\`Dockerfile`: Contains all the commands a user could call on the command line to assemble the image.
+- models\\[{name}](models/)\FastAPI\\`requirements.txt`: The libraries required for the script.
+- models\\[{name}](models/)\FastAPI\app\\`main.py`: The script of the web application.
+
+### Langchains
+
+- langchains\extract_from\\[{filename_method}](langchains/extract_from/)\\`main.ipynb`: The script allowing to download files that will be indexed in the RAG.
+- langchains\documents_from\\[{filename_method}](langchains/documents_from/)\\`main.ipynb`: The script split and store Documents used by the RAG.
+- langchains\dialog\\[{name}](langchains/dialog/): The model that work correctly independently and are likely to have good results in a RAG.
 
 ## External Help links
 
@@ -116,6 +181,6 @@ pip3 freeze > config_mac.txt
 
 ## License
 
-MIT License
+[MIT License](LICENSE.md)
 
-Copyright (c) [2023] [Dev Launchers]
+Copyright (c) [2024] [Dev Launchers]

@@ -3,130 +3,52 @@
 ## Table of Contents
 
 - [Overview](#overview)
-- [Scenario](#scenario)
+- [Team](#team)
+- [Structure](#structure)
+    - [Models](#models)
+    - [Langchains](#langchains)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Dependencies](#dependencies)
-- [Files](#files)
-- [External Help links](#external-help-links)
+    - [Notebook](#notebook)
+    - [Informations](#Informations)
 - [License](#license)
 
 ## Overview
 
-The [Dev Launchers](https://devlaunchers.org) website is a community of aspiring developers eager to learn and gain experience. As such, projects are open-source and ambitious, allowing members to enhance their skills.
+The [Dev Launchers](https://devlaunchers.org) website is a community of aspiring developers eager to learn and gain experience. As such, projects are [open-source](https://en.wikipedia.org/wiki/Open_source) and ambitious, allowing members to enhance their skills.
 
-The [ChatBot](https://en.wikipedia.org/wiki/Chatbot) project is valuable to this international community working across different time zones. To integrate a new member, it is crucial to be able to address their questions. This becomes challenging when the part of the community capable of responding is located 12 time zones away from the new member. Therefore, it was essential to have a service capable of answering questions, even in the middle of the night.
+The [ChatBot](https://en.wikipedia.org/wiki/Chatbot) project is valuable to this international community working across different time zones. To integrate a new member, it is crucial to be able to address their questions. This becomes challenging when the part of the community capable of responding is located 24 time zones away from the new member. Therefore, it was essential to have a service capable of answering questions, even in the middle of the night.
 
-The purpose of this project is to design an intelligent chatbot, entirely built with open-source components, to answer questions about the teams and projects of an organization. We strive to understand how the different layers of a RAG Langchain work in order to design code that strikes a balance between readability and the performance of the frameworks used.
+The purpose of this project is to design an intelligent chatbot, entirely built with open-source components, to answer questions about the teams and projects of an organization. We strive to understand how the different layers of a [RAG](https://en.wikipedia.org/wiki/Retrieval-augmented_generation) [Langchain](https://python.langchain.com/docs/get_started/introduction) work in order to design code that strikes a balance between readability and the performance of the frameworks used.
 
-## Scenario
+## Team
 
-### Models
+If you've joined Dev Launchers, you've learned that participating in an online project means forgetting earthly boundaries and adopting the true international borders: [UTC & GMT](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
-1. 🕒 Development of the current [chatbot](https://github.com/dev-launchers/onboarding-bot) by the team, utilizing the [ChatGPT API](https://platform.openai.com/docs/api-reference).
-2. 🕒 Feasibility study using a list of popular Open Source LLMs of 2023.
+To assist this team, information is available about their roles and locations in this [Notebook](TEAM.ipynb) (If you're unable to read this file, refer to the [Installation](#installation) chapter of this [Markdown](https://en.wikipedia.org/wiki/Markdown)).
 
-| 🐳 | 🦜 | Competitor | Statut    | GitHub          | Hugging Face    | Info    |
-|----|----|------------|-----------|-----------------|-----------------|---------|
-| ✅ | 🔜 | [Open LLaMA](models/OpenLLaMA/) | Ready       | [Code](https://github.com/openlm-research/open_llama)      | [Model](https://huggingface.co/openlm-research/open_llama_7b) | |
-| ✅ | ✅ | [Dolly 2.0](models/Dolly_2/)    | Ready       | [Code](https://github.com/databrickslabs/dolly)            | [Model](https://huggingface.co/databricks/dolly-v2-12b) | |
-| ✅ | 🔜 | [MPT](models/MPT/)              | Ready       | [Code](https://github.com/mosaicml/llm-foundry/)           | [Model](https://huggingface.co/mosaicml/mpt-30b) | |
-| ✅ | 🔜 | [Alpaca](models/Alpaca/)        | Ready       | [Code](https://github.com/tatsu-lab/stanford_alpaca)       | [Model](https://huggingface.co/tatsu-lab/alpaca-7b-wdiff) | |
-| ✅ | 🔜 | [FLAN-T5](models/FLAN_T5/)      | Ready       | [Code](https://github.com/lm-sys/FastChat)                 | [Model](https://huggingface.co/google/flan-t5-base) | |
-| 🚼 | 🔜 | [Llama 2](models/Llama_2/)      | In progress |                                                            | [Model](https://huggingface.co/meta-llama/Llama-2-7b) | |
-| 🚼 | 🔜 | [Falcon](models/Falcon/)        | In progress |                                                            | [Model](https://huggingface.co/tiiuae/falcon-7b) | |
-| 🚼 | 🔜 | [Guanaco](models/Guanaco/)      | In progress | [Code](https://github.com/artidoro/qlora/)                 | | |
-| 🚼 | 🔜 | [Bloom](models/Bloom/)          | In progress | [Code](https://github.com/bigscience-workshop/xmtf#models) | [Model](https://huggingface.co/bigscience/bloom) | |
-| 🚼 | 🔜 | [GPT NeoXT](models/GPT_NeoXT/)  | In progress | [Code](https://github.com/togethercomputer/OpenChatKit/blob/main/docs/GPT-NeoXT-Chat-Base-20B.md) | [Model](https://huggingface.co/togethercomputer/GPT-NeoXT-Chat-Base-20B) |         |
-| 🚼 | 🔜 | [WizardLM](models/WizardLM/)    | In progress | [Code](https://github.com/nlpxucan/WizardLM)               | [Model](https://huggingface.co/WizardLM) | |
-| 🆘 | 🔜 | [GPT4All](models/GPT4All/)      | Unstartable | [Code](https://github.com/nomic-ai/gpt4all)                | | |
-| 🆘 | 🔜 | [Mistral](models/Mistral/)      | Unstartable |                                                            | [Model](https://huggingface.co/mistralai) | |
-|    |    |                                 |             |                                                            | | |
+## Structure
 
-3. 📝 Compile and rewrite the readme.md files, procedures, create team descriptions, and consolidate documentation for the tools used.
-4. 📝 Comparison of results with [MLflow](https://mlflow.org).
-5. 📝 [Fine-Tuning](https://huggingface.co/docs/transformers/training) of the chosen model(s).
-6. 📝 Testing within the [Dev Launchers](https://devlaunchers.org) community.
+The subfolders listed below contain key steps in our research for creating a functional, convenient, and maintainable chatbot.
 
-### Langchains
+### Models 
 
-1. 🕒 [Retrieval](https://python.langchain.com/docs/modules/data_connection/) (Load, split, embed, store, retrieval)
+The [models](models/MODELS.md) folder contains open-source [LLMs](https://en.wikipedia.org/wiki/Large_language_model).
 
-    1. [Load](https://python.langchain.com/docs/integrations/document_loaders) and [transform](https://python.langchain.com/docs/integrations/document_transformers)
+### Langchains 
 
-    | Statut |   Type                                            | Method |
-    |--------|---------------------------------------------------|--------|
-    | ✅     | [Markdown](langchains/extract_from/readme_urls/)  | URL    |
-    | ✅     | [Markdown](langchains/extract_from/readme_files/) | Files  |
-    | 🔜     | Python                                            |        |
-    |        |                                                   |        |
-
-    2. Split
-
-    | Statut |   Type                                              | Info |
-    |--------|-----------------------------------------------------|------|
-    | ✅     | [Markdown](langchains/documents_from/readme_files/) | [Info](https://python.langchain.com/docs/modules/data_connection/document_transformers/markdown_header_metadata) |
-    | 🔜     | Python                                              | |
-    |        |                                                     | |
-
-    3. [Embed](https://python.langchain.com/docs/integrations/text_embedding)
-
-    | Statut | Name                                                    | Info |
-    |--------|---------------------------------------------------------|------|
-    | ✅     | [Awadb](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/text_embedding/awadb) |
-    | ✅     | [Hugging Face](langchains/documents_from/readme_files/) | [Info](https://python.langchain.com/docs/integrations/text_embedding/huggingfacehub) |
-    |        |                                                         | |
-
-    4. [Store](https://python.langchain.com/docs/integrations/vectorstores)
-
-    | Statut | Name                                                | Info |
-    |--------|-----------------------------------------------------|------|
-    | ✅     | [Annoy](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/annoy) |
-    | ✅     | [Awadb](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/awadb) |
-    | ✅     | [Chroma](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/chroma) |
-    | ✅     | [FAISS](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/faiss) |
-    | ✅     | [LanceDB](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/lancedb) |
-    | 🔜     | Pinecone                                             | [Info](https://python.langchain.com/docs/integrations/vectorstores/pinecone) |
-    | ✅     | [Qdrant](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/qdrant) |
-    | ✅     | [scikit-learn](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/sklearn) |
-    | ✅     | [TileDB](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/tiledb) |
-    | ✅     | [USearch](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/usearch) |
-    | 🔜     | [vearch](langchains/documents_from/readme_files/)        | [Info](https://python.langchain.com/docs/integrations/vectorstores/vearch) |
-    |        |                                                         | |
-
-    5. Retrieval
-
-    🕒
-
-2. 🕒 Connect to the agent
-3. 🕒 Test the API
+The [langchains](langchains/LANGCHAINS.md) folder contains [components](https://python.langchain.com/docs/integrations/components) of the [langchain](https://en.wikipedia.org/wiki/Instruction_pipelining) pipeline.
 
 ## Installation
 
-The chatbots are in their respective folders with an application launcher `autorun.sh` to install each of them without specific knowledge.
+### Notebook
 
-On Mac, open the terminal and type:
+For read Notebooks on the Mac.
+
+On Mac, open the terminal, copy and paste the following line of code. Then, press the Enter key (↩︎) to execute:
 ```shell
-cd
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && brew install python && brew install jupyter && (pip install folium || pip3 install folium)
 ```
-Drag the **`folder`** containing the file `autorun.sh`, then press the Enter key (↩︎).
-
-_If you have done it correctly, the **`~`** between your machine's name (`name@MacBook-Pro-of-Name`) and the **`%`** sign should display the name of the `folder` instead._
-
-Execute the following line of code by pressing the Enter key (↩︎):
-```shell
-sh autorun.sh
-```
-Wait a moment, the model should open in your default web browser.
-
-## Usage
-
-You can try out the different pre-installed language models in the subfolders named after them in the `models` directory.
-
-## Dependencies
-
-- The project is implemented in `Python 3.11.6`.
-- All dependencies are include in `requirements.txt` files.
+After installing the necessary tools, most people read their notebooks using [Visual Studio Code](https://code.visualstudio.com).
 
 ### Informations
 
@@ -143,41 +65,6 @@ Execute the following line of code by pressing the Enter key (↩︎):
 ```shell
 pip3 freeze > config_mac.txt
 ```
-
-## Files
-
-### Models
-
-- models\\[{name}](models/)\FastAPI\\`autorun.sh`: Launch script for download, install and start the application.
-- models\\[{name}](models/)\FastAPI\\`Dockerfile`: Contains all the commands a user could call on the command line to assemble the image.
-- models\\[{name}](models/)\FastAPI\\`requirements.txt`: The libraries required for the script.
-- models\\[{name}](models/)\FastAPI\app\\`main.py`: The script of the web application.
-
-### Langchains
-
-- langchains\extract_from\\[{filename_method}](langchains/extract_from/)\\`main.ipynb`: The script allowing to download files that will be indexed in the RAG.
-- langchains\documents_from\\[{filename_method}](langchains/documents_from/)\\`main.ipynb`: The script split and store Documents used by the RAG.
-- langchains\dialog\\[{name}](langchains/dialog/): The model that work correctly independently and are likely to have good results in a RAG.
-
-## External Help links
-
-* [ChatBot Llama](https://blog.streamlit.io/how-to-build-a-llama-2-chatbot/)
-    * [ChatBot Llama Exemple](https://llama2.streamlit.app)
-
-* [ChatBot Streamlit](https://github.com/streamlit/llm-examples/tree/main)
-    * [ChatBot Streamlit Exemple](https://llm-examples.streamlit.app)
-
-* [ChatGPT API](https://platform.openai.com/docs/introduction)
-    * [fine-tuning Chat-GPT](https://platform.openai.com/docs/guides/fine-tuning)
-
-* LangChain :
-    * [Hugging Face](https://python.langchain.com/docs/integrations/platforms/huggingface)
-    * [Hugging Face Tool](https://python.langchain.com/docs/integrations/tools/huggingface_tools)
-
-    * [Docs GitHub](https://python.langchain.com/docs/integrations/document_loaders/github)
-    * [Docs Source Code](https://python.langchain.com/docs/integrations/document_loaders/source_code)
-
-    * [subtitles](https://python.langchain.com/docs/integrations/document_loaders/imsdb)
 
 ## License
 

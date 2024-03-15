@@ -16,7 +16,7 @@
 
 The [Dev Launchers](https://devlaunchers.org) website is a community of aspiring developers eager to learn and gain experience. As such, projects are [open-source](https://en.wikipedia.org/wiki/Open_source) and ambitious, allowing members to enhance their skills.
 
-The [ChatBot](https://en.wikipedia.org/wiki/Chatbot) project is valuable to this international community working across different time zones. To integrate a new member, it is crucial to be able to address their questions. This becomes challenging when the part of the community capable of responding is located 24 time zones away from the new member. Therefore, it was essential to have a service capable of answering questions, even in the middle of the night.
+The [ChatBot](https://en.wikipedia.org/wiki/Chatbot) project is valuable to this international community working across different time zones. To integrate a new member, it is crucial to be able to address their questions. This becomes challenging when the part of the community capable of responding is located 12 time zones away from the new member. Therefore, it was essential to have a service capable of answering questions, even in the middle of the night.
 
 The purpose of this project is to design an intelligent chatbot, entirely built with open-source components, to answer questions about the teams and projects of an organization. We strive to understand how the different layers of a [RAG](https://en.wikipedia.org/wiki/Retrieval-augmented_generation) [Langchain](https://python.langchain.com/docs/get_started/introduction) work in order to design code that strikes a balance between readability and the performance of the frameworks used.
 
@@ -36,7 +36,7 @@ The [models](models/MODELS.md) folder contains open-source [LLMs](https://en.wik
 
 ### Langchains 
 
-The [langchains](langchains/LANGCHAINS.md) folder contains [components](https://python.langchain.com/docs/integrations/components) of the [langchain](https://en.wikipedia.org/wiki/Instruction_pipelining) pipeline.
+The [langchains](langchains/LANGCHAINS.md) folder contains [components](https://python.langchain.com/docs/integrations/components) of the langchain [pipeline](https://en.wikipedia.org/wiki/Instruction_pipelining).
 
 ## Installation
 

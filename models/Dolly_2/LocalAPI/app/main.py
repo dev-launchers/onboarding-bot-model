@@ -16,10 +16,14 @@ ssl._create_default_https_context = ssl._create_unverified_context
 import torch
 from instruct_pipeline import InstructionTextGenerationPipeline
 from transformers import AutoModelForCausalLM, AutoTokenizer
+import os
 
 # ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨#
 #      Large Lang. Model        #
 # ______________________________#
+
+# Définir la variable d'environnement
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
 tokenizer = AutoTokenizer.from_pretrained("databricks/dolly-v2-3b")
 model = AutoModelForCausalLM.from_pretrained("databricks/dolly-v2-3b")

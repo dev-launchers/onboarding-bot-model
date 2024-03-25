@@ -27,13 +27,7 @@ def repositories_metadata_from(organization, access_token):
         return None
     
 
-
-def repository_from(metadata_github):
-    clone_url = metadata_github['clone_url']
-    path = metadata_github['full_name']
-    # Download Repository
-    git.Repo.clone_from(url=clone_url, to_path= path)
-
+def remove_hidden_at(path):    
     # Iterate over all files and folders in the directory
     for file in os.listdir(path):
         if file.startswith('.'):
@@ -44,8 +38,40 @@ def repository_from(metadata_github):
                 shutil.rmtree(full_path) # Remove the directory
 
 
+def repository_from(metadata_github):
+    clone_url = metadata_github['clone_url']
+    path = metadata_github['full_name']
+    try:
+        # Download Repository
+        git.Repo.clone_from(url=clone_url, to_path= path)
+
+        remove_hidden_at(path)
+    except:
+        pass
+
+
+def wiki_from(metadata_github):
+    full_name = metadata_github['full_name']
+    path = os.path.join('wiki', full_name)
+    url = f"https://github.com/{full_name}.wiki.git"
+    try:
+        # Download Repository
+        git.Repo.clone_from(url=url, to_path= path)
+
+        remove_hidden_at(path)
+    except:
+        pass                
+
+
 def github_projects_from(organization, access_token):
     metadatas = repositories_metadata_from(organization, access_token)
 
     for metadata in metadatas:
         repository_from(metadata)
+
+
+def github_wikis_from(organization, access_token):
+    metadatas = repositories_metadata_from(organization, access_token)
+
+    for metadata in metadatas:
+        wiki_from(metadata)

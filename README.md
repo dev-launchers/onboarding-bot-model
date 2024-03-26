@@ -50,7 +50,7 @@ On Mac, open the terminal, copy and paste the following line of code. Then, pres
 ```
 After installing the necessary tools, most people read their notebooks using [Visual Studio Code](https://code.visualstudio.com).
 
-### Informations
+### Information
 
 To obtain the list of installed libraries on the Mac.
 
@@ -65,6 +65,81 @@ Execute the following line of code by pressing the Enter key (↩︎):
 ```shell
 pip3 freeze > config_mac.txt
 ```
+
+### Run locally
+To run the bot locally, please make sure to have these applications downloaded locally:
+
+- git
+- docker
+- Linux wsl (If on windows)
+
+Next, you should create a folder somewhere in your system to download the front-end and back-end source code
+
+.
+
+└── Bot<br>
+&emsp;├── Front-End<br>
+&emsp;└── Back-End
+
+Download the frontend branch and backend from these two branched:
+
+Frontend (devlaunchers staging/gptbot):
+
+```shell
+!git clone https://github.com/dev-launchers/dev-launchers-platform.git
+```
+
+Backend (devlaunchers onboarding-bot):
+
+```shell
+!git clone https://github.com/dev-launchers/onboarding-bot.git
+```
+
+(Note: The frontend will be running on port 3000, and the backend will be running on port 5000. These are local ports.)
+
+
+Now, we can setup the backend.
+
+In order to set up and deploy the backend in a testing environment, you must make sure that docker is installed and running. The docker image which will be created will take up about 9GB worth of storage on your system. First, you must enter the key in the .env file. If you have an Openai key to use, replace “INSERT KEY HERE” with your openai key. Now that you have your key all set up, we can now create the docker image. Make sure to insert the key without quotes.
+
+In order to create the image, enter this command in the directory of the onboarding-bot repo (It can be any name you give it):
+
+```shell
+!docker build -t flaskserver .
+```
+
+This will initiate a container from the image (You can change “flaskTest1” to whatever name you want for the container)
+
+```shell
+!docker run --env-file ./.env --name=flaskTest1 -p=5000:5000 flaskserver
+```
+
+Now that your docker image is up and running, test it by typing the command in your terminal:
+
+```shell
+(Windows) curl -X POST -d "string=hello" http://localhost:5000/question
+```
+```shell
+(Linux) wget --post-data="string=hello" http://localhost:5000/question
+```
+
+It should respond back to your prompt. If it works, then you are ready to move onto the frontend. If not, check your API key and make sure it is not incorrect.
+
+To set up the front-end, nagivate to the front-end file and type these commands in:
+
+```shell
+!yarn
+```
+```shell
+!yarn install
+```
+```shell
+!yarn workspace @devlaunchers/app dev
+```
+
+You should then be able to navigate to http://localhost:3000/gptbot
+
+There, you can test out the onboarding bot from the front-end design!
 
 ## License
 

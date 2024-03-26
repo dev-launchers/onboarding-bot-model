@@ -14,7 +14,7 @@
 
 [Retrieval](https://python.langchain.com/docs/modules/data_connection/) 
 
-![Pipeline (Load, split, embed, store, retrieval)](https://python.langchain.com/assets/images/data_connection-95ff2033a8faa5f3ba41376c0f6dd32a.jpg)
+![Pipeline (Load, transfrom, embed, store, retrieve)](https://python.langchain.com/assets/images/data_connection-95ff2033a8faa5f3ba41376c0f6dd32a.jpg)
 
 ## Competition
 

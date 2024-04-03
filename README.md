@@ -117,10 +117,7 @@ This will initiate a container from the image (You can change “flaskTest1” t
 Now that your docker image is up and running, test it by typing the command in your terminal:
 
 ```shell
-(Windows) curl -X POST -d "string=hello" http://localhost:5000/question
-```
-```shell
-(Linux) wget --post-data="string=hello" http://localhost:5000/question
+curl -X POST -d "string=hello" http://localhost:5000/question
 ```
 
 It should respond back to your prompt. If it works, then you are ready to move onto the frontend. If not, check your API key and make sure it is not incorrect.

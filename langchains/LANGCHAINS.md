@@ -41,6 +41,8 @@ The LLM, having the answer in the question, only reformulates and requires littl
 
 ## Structure
 
+### Retrieval
+
 The [load](./load/) folder contains different document loaders.
 
 The [transfrom](./transform/) folder contains functions for split documents in chunks.
@@ -50,6 +52,10 @@ The [embed](./embed/) folder contains the function for capture the semantic mean
 The [store](./store/) folder contains the database to support efficient storage and searching of these embeddings.
 
 The [retrieve](./retrieve/) folder contains the fonction for be abble to do semantic search.
+
+### RAG
+
+The [chain](./chain/) folder contains the fonction for chain who allows for retrieving the document corpus, conversation history, user question, and sending all of this to a LLM that returns an answer.
 
 
 ## **interesting link for airflow update vector store**

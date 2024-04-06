@@ -1,8 +1,7 @@
 **.DS_Store
 **__pycache__
 **.streamlit
-**secret.md
 **offload
 **TOKEN.txt
-**TOKEN_HF.txt
 **Folder
+**.env

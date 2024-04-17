@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "my-app"
+name = "chatbot-app"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "This is a first example of a working RAG for Dev Launchers."
+authors = ["Gauthier Rammault <gauthier.r@devlaunchers.com>"]
 readme = "README.md"
 packages = [
     { include = "app" },
@@ -11,9 +11,15 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.11"
 uvicorn = "^0.23.2"
-langserve = {extras = ["server"], version = ">=0.0.30"}
+langserve = {extras = ["server"], version = ">=0.0.51"}
 pydantic = "<2"
-
+fastapi = "^0.104.0"
+langchain = "^0.1.8"
+langchain-core = "^0.1.30"
+langchain-openai = "^0.0.8"
+langchain-community = "^0.0.27"
+gpt4all = "^2.2.1.post1"
+faiss-cpu = "^1.7.4"
 
 [tool.poetry.group.dev.dependencies]
 langchain-cli = ">=0.0.15"

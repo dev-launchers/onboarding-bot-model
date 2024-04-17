@@ -22,7 +22,7 @@ Chatbot:"""
 prompt = PromptTemplate(
     input_variables=["chat_history", "human_input", "context"], template=template
 )
-memory = ConversationBufferMemory(memory_key="chat_history", input_key="human_input")
+memory = ConversationBufferMemory(memory_key="chat_history", ai_prefix="Chatbot", human_prefix="Human")
 
 chain = ConversationalRetrievalChain.from_llm(
     OpenAI(temperature=0), condense_question_prompt=prompt, retriever=retriever, memory=memory

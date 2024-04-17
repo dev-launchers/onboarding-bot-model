@@ -1,4 +1,4 @@
-from langchain.memory import ConversationBufferMemory
+from langchain.memory import ConversationBufferWindowMemory
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import OpenAI
 from langchain_community.vectorstores import FAISS as VectorStore
@@ -22,7 +22,7 @@ Chatbot:"""
 prompt = PromptTemplate(
     input_variables=["chat_history", "human_input", "context"], template=template
 )
-memory = ConversationBufferMemory(memory_key="chat_history", ai_prefix="Chatbot", human_prefix="Human")
+memory = ConversationBufferWindowMemory(memory_key="chat_history", ai_prefix="Chatbot", k=2)
 
 chain = ConversationalRetrievalChain.from_llm(
     OpenAI(temperature=0), condense_question_prompt=prompt, retriever=retriever, memory=memory

@@ -3,7 +3,7 @@
 ## Launch LangServe
 
 ```bash
-export OPENAI_API_KEY=$OPENAI_API_KEY
+export HUGGINGFACEHUB_API_TOKEN=$HUGGINGFACEHUB_API_TOKEN
 ```
 
 ```bash
@@ -28,12 +28,12 @@ note it for use in the next step.
 To run the image, you'll need to include any environment variables
 necessary for your application.
 
-In the below example, we inject the `OPENAI_API_KEY` environment
+In the below example, we inject the `HUGGINGFACEHUB_API_TOKEN` environment
 variable with the value set in my local environment
-(`$OPENAI_API_KEY`)
+(`$HUGGINGFACEHUB_API_TOKEN`)
 
 We also expose port 8080 with the `-p 8080:8080` option.
 
 ```shell
-docker run -e OPENAI_API_KEY=$OPENAI_API_KEY -p 8080:8080 my-langserve-app
+docker run -e HUGGINGFACEHUB_API_TOKEN=$HUGGINGFACEHUB_API_TOKEN -p 8080:8080 my-langserve-app
 ```

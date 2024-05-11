@@ -11,3 +11,9 @@ spec:
         image: devlaunchers/onboarding-bot-model
         ports:
         - containerPort: 8080
+        env:
+        - name: HUGGINGFACEHUB_API_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: onboarding-bot-model-secrets
+              key: huggingfacehub-api-token

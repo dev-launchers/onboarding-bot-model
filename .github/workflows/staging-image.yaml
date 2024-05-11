@@ -43,7 +43,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context: ./langserves/basic
           file: ./langserves/basic/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}

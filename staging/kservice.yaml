@@ -1,0 +1,13 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  namespace: onboarding-bot-staging
+  name: onboarding-bot-model
+spec:
+  template:
+    spec:
+      containers:
+      - name: onboarding-bot-model
+        image: devlaunchers/onboarding-bot-model
+        ports:
+        - containerPort: 8080

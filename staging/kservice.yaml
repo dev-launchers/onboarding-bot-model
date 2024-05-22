@@ -17,15 +17,3 @@ spec:
             secretKeyRef:
               name: onboarding-bot-model-secrets
               key: huggingfacehub-api-token
-        readinessProbe:
-          exec:
-            command:
-            - echo
-            - hi
-      nodeSelector:
-        type: virtual-kubelet
-      tolerations:
-      - key: virtual-kubelet.io/provider
-        operator: Exists
-      - key: azure.com/aci
-        effect: NoSchedule

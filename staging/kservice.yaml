@@ -19,7 +19,9 @@ spec:
               key: huggingfacehub-api-token
         readinessProbe:
           exec:
-            command: "echo hi"
+            command:
+            - echo
+            - hi
       nodeSelector:
         type: virtual-kubelet
       tolerations:

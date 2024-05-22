@@ -17,6 +17,9 @@ spec:
             secretKeyRef:
               name: onboarding-bot-model-secrets
               key: huggingfacehub-api-token
+      readinessProbe:
+        exec:
+          command: "echo hi"
       nodeSelector:
         type: virtual-kubelet
       tolerations:

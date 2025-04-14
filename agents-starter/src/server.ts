@@ -13,7 +13,7 @@ import {
   streamText,
   type StreamTextOnFinishCallback,
 } from "ai";
-import { createOpenAI } from "@ai-sdk/openai";
+// import { createOpenAI } from "@ai-sdk/openai";
 import { processToolCalls } from "./utils";
 import { tools, executions } from "./tools";
 import { AsyncLocalStorage } from "node:async_hooks";
@@ -22,10 +22,10 @@ import { createOpenRouter } from '@openrouter/ai-sdk-provider';
 
 // Environment variables type definition
 export type Env = {
-  OPENAI_API_KEY: string;
+  // OPENAI_API_KEY: string;
   Chat: AgentNamespace<Chat>;
-  TOGETHER_AI_BASE_URL: string;
-  TOGETHER_AI_API_KEY: string;
+  // TOGETHER_AI_BASE_URL: string;
+  // TOGETHER_AI_API_KEY: string;
   OPENROUTER_API_KEY: string;
 };
 
@@ -56,9 +56,9 @@ export class Chat extends AIChatAgent<Env> {
           });
 
           // Initialize OpenAI client with API key from environment
-          const openai = createOpenAI({
-            apiKey: this.env.OPENAI_API_KEY,
-          });
+          // const openai = createOpenAI({
+          //   apiKey: this.env.OPENAI_API_KEY,
+          // });
 
           const openrouter = createOpenRouter({
             apiKey: this.env.OPENROUTER_API_KEY,
@@ -108,11 +108,11 @@ export class Chat extends AIChatAgent<Env> {
  */
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext) {
-    if (!env.OPENAI_API_KEY) {
+    if (!env.OPENROUTER_API_KEY) {
       console.error(
-        "OPENAI_API_KEY is not set, don't forget to set it locally in .dev.vars, and use `wrangler secret bulk .dev.vars` to upload it to production"
+        "OPENROUTER_API_KEY is not set, don't forget to set it locally in .dev.vars, and use `wrangler secret bulk .dev.vars` to upload it to production"
       );
-      return new Response("OPENAI_API_KEY is not set", { status: 500 });
+      return new Response("OPENROUTER_API_KEY is not set", { status: 500 });
     }
     return (
       // Route the request to our agent or return 404 if not found
